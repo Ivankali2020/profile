@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+/*sectionsColor: ['#F2E9E4', '#C9ADA7', '#9A8C98', '#4A4E69', '#22223B'],*/
+body{
+    font-family: 'Cutive Mono', monospace;
+    one:#F2E9E4;
+}
+.section::-webkit-scrollbar {
+    display: none;
+}
+
+.header{
+    left:50px;
+    top:50px;
+    z-index:5;
+    border: 3px solid black ;
+    border-right: none;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    padding: 30px ;
+    width: 210px;
+}
+.side{
+    height: 216px;
+    right: 0;
+    top:50px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 82%;
+    z-index:4;
+}
+.bigSide{
+    margin-top: 300px;
+}
+.smallSide{
+    background-color: rgb(49, 47, 47);
+    border: 1px solid black;
+    border-top-left-radius: 150px;
+}
+
+.profile{
+    margin-top: 300px;
+}
+.divider{
+    border-bottom: 1px solid lavender;
+}
+.dividerBlack{
+    border-bottom: 1px solid black;
+}
+td{
+    padding: 2px 5px ;
+}
+.Pheight{
+    height: 5px;
+}
+
+#myMenu{
+    z-index: 5;
+    position: fixed;
+    display: flex;
+}
+.nav-item{
+    padding: 8px 14px;
+    border-radius: 9px;
+    transition: .5s all ease;
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+.nav-item{
+    background-color: rgba(255, 255, 255, 0.89);
+}
+.nav-item:hover a{
+    color: black;
+}
+.nav-item a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#myMenu .active{
+    background-color: rgba(80, 77, 77, 0.73);
+}
+
+#myMenu .active a{
+    color: white;
+}
+
+
+/*this is box*/
+.box{
+    position: absolute;
+    top: 10px; left: 10px;
+}
+
+.boxTwo{
+    position: absolute;
+    bottom: 50px; right: 50px;
+}
+.rec{
+    width: 6px;
+    height: 6px;
+    margin: 5px;
+    background: rgb(242,233,228);
+    animation: recLoop  1s  infinite alternate-reverse ;
+    border-radius: 50%;
+}
+@keyframes recLoop {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(39px);
+    }
+
+
+}
+@media screen and (max-width:1024px) {
+    .side{
+        width: 70%;
+    }
+}
+@media screen and (max-width:780px) {
+    .navbar-nav{
+        width: 100%;
+        height: 100%;
+    }
+    #myMenu, .nav-item{
+        z-index: 80;
+        left: 0;right: 0;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 30px;
+        transition: 1s all ease;
+    }
+    #myMenu li{
+        display: block;
+        width: 100%;
+        padding: 8px 14px;
+        border-radius: 9px;
+        transition: .5s all ease;
+        margin: 10px 0;
+    }
+    #myMenu li:hover a{
+        color: black;
+    }
+    #myMenu li a{
+        text-decoration: none;
+        color: #000000;
+    }
+    .smallSide{
+        border-top-left-radius: 100px;
+    }
+    .bigSide{
+        margin-top: 50px;
+    }
+    .header{
+        left: 20px;
+    }
+    .side{
+        width:70%; 
+    }
+    .side h3{
+        font-size: 33px ;
+    }
+    .side p{
+        font-size: 23px ;
+    }
+}
+
+@media screen and (max-width:582px) {
+    .side{
+        width:60%; 
+    }
+}
+
+@media screen and (max-width:382px) {
+    .header{
+        width: 100px;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header img{
+        width: 80px;
+        height: 80px;
+    }
+    .side{
+        height: 100px;
+        padding: 10px;
+        border: none;
+        color: white;
+        background-color: transparent!important;
+    }
+    .side p{
+        font-size: 15px;
+    }
+    .profile{
+        margin-top: 180px;
+    }
+}
